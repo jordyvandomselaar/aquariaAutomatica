@@ -1,0 +1,26 @@
+{
+  "name": "Aquaria Automatica",
+  "description": "Automation of your aquarium",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Aquarium",
+    "Automation"
+  ],
+  "authors": [
+    "jordy.van.domselaar@outlook.com"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}

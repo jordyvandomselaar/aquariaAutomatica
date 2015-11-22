@@ -1,0 +1,4 @@
+# Just ignoring some things for git
+bower_components
+node_modules
+vendor
