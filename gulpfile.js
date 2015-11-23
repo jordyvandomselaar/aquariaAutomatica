@@ -4,18 +4,15 @@
 
 /*----------  Requiring all the things  ----------*/
 var gulp = require('gulp'),
-	plugins = require('gulp-load-plugins')({lazy: false});
+	plugins = require('gulp-load-plugins')();
 
 
-/*----------  Compile Stylus  ----------*/
-gulp.task('stylus',function(){
-	return gulp.src(['app/styles/**/*.styl', '!app/styles/no_compile/**/*.styl'])
-		.pipe(plugins.plumber())
-		.pipe(plugins.watch(['app/styles/**/*.styl', '!app/styles/no_compile/**/*.styl'],{
+/*----------  Compile styles  ----------*/
+gulp.task('styles',function(){
+	return gulp.src('app/styles/**/*.html')
+		.pipe(plugins.watch('app/styles/**/*.html',{
 			verbose: true
 		}))
-		.pipe(plugins.stylus())
-		.pipe(plugins.plumber.stop())
 		.pipe(gulp.dest('storage/styles'))
 });
 
@@ -35,6 +32,6 @@ gulp.task('jade', function(){
 });
 
 /*----------  Run the tasks  ----------*/
-gulp.task('default',['stylus', 'jade']);
+gulp.task('default',['styles', 'jade']);
 	
 /*=====  End of Gulpfile  ======*/
