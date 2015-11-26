@@ -1,3 +1,12 @@
 extends ./layouts/main
 
 block content
+        paper-card(heading="Bedieningspaneel Aquarium")
+            .card-content
+                iron-pages#pages(selected="0")
+                    .page-arduino.layout.horizontal.center-justified
+                        .layout.vertical
+                            include ./pages/arduino
+                    .page-kaku.layout.horizontal.center-justified
+                        .layout.vertical
+                            include ./pages/kaku

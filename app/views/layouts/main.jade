@@ -6,19 +6,24 @@ html
 		link(rel="stylesheet", href="bower_components/font-awesome/css/font-awesome.css")
 		link(rel="import", href="storage/styles/styles.html")
 		link(rel="import", href="bower_components/polymer/polymer.html")
-		link(rel="import", href="bower_components/paper-material/paper-material.html")
+		link(rel="import", href="bower_components/paper-card/paper-card.html")
 		link(rel="import", href="bower_components/paper-tabs/paper-tabs.html")
 		link(rel="import", href="bower_components/paper-toggle-button/paper-toggle-button.html")
+		link(rel="import", href="bower_components/iron-pages/iron-pages.html")
+		link(rel="import", href="bower_components/iron-flex-layout/iron-flex-layout.html")
 
+		meta(name="viewport", content="initial-scale=1, maximum-scale=1")
+			
 		block styles
 	body
 		paper-tabs#menu(selected="0")
 			paper-tab Arduino
 			paper-tab KAKU
-
-		block content
+		#content.layout.horizontal.wrap.center-justified
+			block content
 
 
 		script(src="bower_components/jquery/dist/jquery.js")
 		script(src="bower_components/bootstrap/dist/js/bootstrap.js")
+		script(src="storage/scripts/pageSelector.js")
 		block scripts

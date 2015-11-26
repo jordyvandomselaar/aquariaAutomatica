@@ -18,9 +18,9 @@ gulp.task('styles',function(){
 
 /*----------  Compile views  ----------*/
 gulp.task('jade', function(){
-	return gulp.src(['app/views/**/*.jade', '!app/views/layouts/**/*.jade'])
+	return gulp.src(['app/views/**/*.jade', '!app/views/layouts/**/*.jade', '!app/views/pages/**/*.jade'])
 		.pipe(plugins.plumber())
-		.pipe(plugins.watch(['app/views/**/*.jade', '!app/views/layouts/**/*.jade'],{
+		.pipe(plugins.watch(['app/views/**/*.jade', '!app/views/layouts/**/*.jade', '!app/views/pages/**/*.jade'],{
 			verbose: true
 		}))
 		.pipe(plugins.jade({
@@ -31,7 +31,20 @@ gulp.task('jade', function(){
 		.pipe(gulp.dest('storage/views'))
 });
 
+/*----------  Compile Coffeescript  ----------*/
+gulp.task('coffee',function(){
+	return gulp.src('app/scripts/**/*.coffee')
+		.pipe(plugins.plumber())
+		.pipe(plugins.watch('app/scripts/**/*.coffee', {
+			verbose: true
+		}))
+		.pipe(plugins.coffee())
+		.pipe(plugins.plumber.stop())
+		.pipe(gulp.dest('storage/scripts'))
+});
+
+
 /*----------  Run the tasks  ----------*/
-gulp.task('default',['styles', 'jade']);
+gulp.task('default',['styles', 'jade', 'coffee']);
 	
 /*=====  End of Gulpfile  ======*/

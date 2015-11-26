@@ -25,6 +25,9 @@
     "polymer": "Polymer/polymer#1.2.0",
     "paper-card": "PolymerElements/paper-card#1.0.0",
     "paper-tabs": "PolymerElements/paper-tabs#1.0.0",
-    "paper-toggle-button": "PolymerElements/paper-toggle-button#1.0.0"
+    "paper-toggle-button": "PolymerElements/paper-toggle-button#~1.0.11",
+    "iron-pages": "PolymerElements/iron-pages#~1.0.4",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.2.1",
+    "paper-behaviors": "PolymerElements/paper-behaviors#~1.0.10"
   }
 }
