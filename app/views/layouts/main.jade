@@ -2,10 +2,9 @@ doctype html
 html
 	head
 		title Aquaria Automatica
-		link(rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.css")
-		link(rel="stylesheet", href="bower_components/font-awesome/css/font-awesome.css")
+		script(src="bower_components/webcomponentsjs/webcomponents-lite.min.js")
+		link(rel="import", href="bower_components/font-roboto/roboto.html")
 		link(rel="import", href="storage/styles/styles.html")
-		link(rel="import", href="bower_components/polymer/polymer.html")
 		link(rel="import", href="bower_components/paper-card/paper-card.html")
 		link(rel="import", href="bower_components/paper-tabs/paper-tabs.html")
 		link(rel="import", href="bower_components/paper-toggle-button/paper-toggle-button.html")
@@ -13,16 +12,18 @@ html
 		link(rel="import", href="bower_components/neon-animation/neon-animatable.html")
 		link(rel="import", href="bower_components/neon-animation/neon-animations.html")
 		link(rel="import", href="bower_components/iron-flex-layout/iron-flex-layout.html")
+		link(rel="import", href="bower_components/paper-slider/paper-slider.html")
 
 		meta(name="viewport", content="initial-scale=1, maximum-scale=1")
 
 		block styles
-	body
-		paper-tabs#menu(selected="0")
-			paper-tab Arduino
-			paper-tab KAKU
-		#content
-			block content
+	body(unresolved).fullbleed
+		#wrapper(unresolved)
+			paper-tabs#menu(selected="0")
+				paper-tab Arduino
+				paper-tab KAKU
+			#content
+				block content
 
 
 		script(src="bower_components/jquery/dist/jquery.js")

@@ -1,23 +1,30 @@
 <style is="custom-style">
     body{
         background-color: rgb(240,240,240);
+        font-family: Roboto;
+        overflow: hidden;
     }
 
     #menu{
         --paper-tabs-selection-bar-color: #ccffff;
-        background-color: #3333cc;
+        background-color: #0066ff;
         color: #FFF;
         font-size: 2rem;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
     }
-
     paper-tab{
-        --paper-tab-ink:rgba(255,255,255,0.7) ;
+        /*--paper-tab-ink:rgba(255,255,255,0.7) ;*/
+        --paper-tab-ink:#B1CFFC ;
+        font-weight: normal;
     }
     #content{
         padding-top: 15px;
     }
     #content paper-toggle-button{
         padding-bottom:5px;
-        --paper-toggle-button-checked-button-color: #3333cc;
+        --paper-toggle-button-checked-button-color: #0066ff;
+    }
+    #temperature{
+        --paper-progress-container-color: #f00;
     }
 </style>  

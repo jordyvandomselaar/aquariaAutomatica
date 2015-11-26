@@ -1,1 +1,7 @@
-p KAKU
+paper-card(heading="Bedieningspaneel Aquarium")
+                    .card-content
+                        .layout.horizontal.center-justified
+                            .layout.vertical
+                                div Temperatuur
+                                paper-slider#temperature(pin, min="0", max="50", secondary-progress="40", editable)
+                                paper-toggle-button Filter

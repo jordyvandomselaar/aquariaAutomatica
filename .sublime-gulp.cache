@@ -1,0 +1,1 @@
+{"C:\\Bitnami\\wampstack-5.5.30-0\\apache2\\htdocs\\aquarium\\gulpfile.js":{"sha1":"ce90ab54d00842541726f184875bdf38ad7e0218","tasks":{"styles":{"name":"styles","dependencies":""},"jade":{"name":"jade","dependencies":""},"coffee":{"name":"coffee","dependencies":""},"default":{"name":"default","dependencies":"styles jade coffee"}}}}
