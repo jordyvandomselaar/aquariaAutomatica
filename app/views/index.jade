@@ -1,12 +1,29 @@
 extends ./layouts/main
 
 block content
-        paper-card(heading="Bedieningspaneel Aquarium")
-            .card-content
-                iron-pages#pages(selected="0")
-                    .page-arduino.layout.horizontal.center-justified
-                        .layout.vertical
-                            include ./pages/arduino
-                    .page-kaku.layout.horizontal.center-justified
-                        .layout.vertical
-                            include ./pages/kaku
+    neon-animated-pages(selected="0", entry-animation="slide-from-right-animation", exit-animation="slide-left-animation")#pages
+        //- .card-content
+        //-     neon-animatable.page-arduino.layout.horizontal.center-justified
+        //-         .layout.vertical
+        //-             include ./pages/arduino
+                    
+        //- .card-content
+        //-     neon-animatable.page-kaku.layout.horizontal.center-justified
+        //-         .layout.vertical
+        //-             include ./pages/kaku
+        neon-animatable.layout.center-justified.horizontal
+            .animatable_content
+                paper-card(heading="Bedieningspaneel Aquarium")
+                    .card-content
+                        .layout.horizontal.center-justified
+                            .layout.vertical
+                                include ./pages/arduino
+        neon-animatable.layout.center-justified.horizontal
+            .animatable_content
+                paper-card(heading="Bedieningspaneel Aquarium")
+                    .card-content
+                        .layout.horizontal.center-justified
+                            .layout.vertical
+                                include ./pages/kaku
+                                        
+                   
