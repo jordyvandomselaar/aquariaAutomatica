@@ -18,12 +18,11 @@ html
 
 		block styles
 	body(unresolved).fullbleed
-		#wrapper(unresolved)
-			paper-tabs#menu(selected="0")
-				paper-tab Arduino
-				paper-tab KAKU
-			#content
-				block content
+		paper-tabs#menu(selected="0")
+			paper-tab Arduino
+			paper-tab KAKU
+		#content
+			block content
 
 
 		script(src="bower_components/jquery/dist/jquery.js")
