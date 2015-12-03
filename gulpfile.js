@@ -27,8 +27,7 @@ gulp.task('jade', function(){
 			pretty: true
 		}))
 		.pipe(plugins.plumber.stop())
-		.pipe(plugins.extReplace('php'))
-		.pipe(gulp.dest('storage/views'))
+		.pipe(gulp.dest('./storage/views'))
 });
 
 /*----------  Compile Coffeescript  ----------*/

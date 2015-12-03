@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aquaria Automatica</title>
+    <script src="../../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="../../bower_components/font-roboto/roboto.html">
+    <link rel="import" href="../styles/styles.html">
+    <link rel="import" href="../../bower_components/paper-card/paper-card.html">
+    <link rel="import" href="../../bower_components/paper-toggle-button/paper-toggle-button.html">
+    <link rel="import" href="../../bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+    <link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  </head>
+  <body unresolved class="fullbleed">
+    <paper-toolbar id="menu">
+      <div class="title">
+        <h1>Aquarium Automatica</h1>
+      </div>
+    </paper-toolbar>
+    <div id="content">
+      <div class="layout center-justified horizontal">
+        <paper-card heading="Bedieningspaneel Aquarium">
+          <div class="card-content">
+            <div class="layout horizontal center-justified">
+              <div class="layout vertical">
+                <div class="toggle zuurstof">
+                  <paper-toggle-button>Zuurstof</paper-toggle-button>
+                </div>
+                <div class="toggle licht">
+                  <paper-toggle-button>Licht</paper-toggle-button>
+                </div>
+                <div class="toggle filter">
+                  <paper-toggle-button>Filter</paper-toggle-button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </paper-card>
+      </div>
+    </div>
+  </body>
+</html>

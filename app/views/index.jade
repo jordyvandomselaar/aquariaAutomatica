@@ -1,10 +1,14 @@
 extends ./layouts/main
 
 block content
-    neon-animated-pages(selected="0", entry-animation="slide-from-right-animation", exit-animation="slide-left-animation")#pages
-        neon-animatable.layout.center-justified.horizontal
-            .animatable_content
-               include ./pages/arduino
-        neon-animatable.layout.center-justified.horizontal
-            .animatable_content
-               include ./pages/kaku
+    .layout.center-justified.horizontal
+        paper-card(heading="Bedieningspaneel Aquarium")
+            .card-content
+                .layout.horizontal.center-justified
+                    .layout.vertical
+                        .toggle.zuurstof
+                            paper-toggle-button Zuurstof
+                        .toggle.licht
+                            paper-toggle-button Licht
+                        .toggle.filter
+                            paper-toggle-button Filter
