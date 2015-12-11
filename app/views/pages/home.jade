@@ -1,0 +1,30 @@
+.container.layout.horizontal.center-justified.wrap
+					paper-card(heading="Aquarium").flex-1.card
+						.card-content
+							.layout.horizontal.center-justified
+								.layout.vertical
+									paper-toggle-button.pad-bot-5 Licht
+									paper-toggle-button.pad-bot-5 Zuurstof
+									paper-toggle-button.pad-bot-5 Filter
+							
+
+					paper-card(heading="Gordijnen").flex-1.card
+						.card-content
+							.layout.horizontal.center-justified
+								.layout.vertical
+									.pad-bot-20.layout.horizontal.wrap
+										paper-button(raised) Open
+										paper-button(raised) Dicht
+										paper-button(raised) Stop
+									paper-toggle-button.pad-bot-5 Spots
+									paper-toggle-button.pad-bot-5 Strips
+
+					paper-card(heading="Sfeer").flex-1.card
+						.card-content
+							.layout.horizontal.center-justified
+								.layout.vertical.wrap
+									div Eet tafel
+									paper-slider(min="0", max="12", value="0", pin, editable).pad-bot-5
+									paper-toggle-button.pad-bot-5 Hoofd licht
+									paper-toggle-button.pad-bot-5 Tv wand
+									paper-toggle-button.pad-bot-5 Achter wand

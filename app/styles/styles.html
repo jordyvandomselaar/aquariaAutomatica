@@ -2,7 +2,7 @@
     body{
         background-color: rgb(240,240,240);
         font-family: 'Roboto', sans-serif;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     #menu{
@@ -10,37 +10,28 @@
         background-color: #0066ff;
         color: #FFF;
         font-size: 2rem;
-        box-shadow: inset 0px -4px 0px 0px #ccffff, 0px 3px 6px rgba(0, 0, 0, 0.2);
     }
     paper-tab{
         /*--paper-tab-ink:rgba(255,255,255,0.7) ;*/
         --paper-tab-ink:#B1CFFC ;
         font-weight: normal;
     }
-    #content{
-        padding-top: 15px;
-    }
-    #content paper-toggle-button{
+    paper-toggle-button.toggle{
         --paper-toggle-button-checked-button-color: #0066ff;
     }
-    .toggle{
+    .pad-bot-5{
         padding-bottom:5px;
     }
-    #temperature{
-        --paper-progress-container-color: #f00;
+    .pad-bot-20{
+        padding-bottom:20px;
     }
-    .title{
-        text-align: center;
-        margin-left: 0;
+    .card {
+        min-width: 200px;
+        margin: 1% 1%;
+    }
 
+    .card .card-content {
+        min-height: 150px;
+    }
 
-    }
-    .title>h1{
-        font-size: 2rem;
-    }
-    .layout{
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-    }
 </style>  

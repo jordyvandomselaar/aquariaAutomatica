@@ -18,9 +18,9 @@ gulp.task('styles',function(){
 
 /*----------  Compile views  ----------*/
 gulp.task('jade', function(){
-	return gulp.src(['app/views/**/*.jade', '!app/views/layouts/**/*.jade', '!app/views/pages/**/*.jade'])
+	return gulp.src('app/views/**/*.jade')
 		.pipe(plugins.plumber())
-		.pipe(plugins.watch(['app/views/**/*.jade', '!app/views/layouts/**/*.jade', '!app/views/pages/**/*.jade'],{
+		.pipe(plugins.watch('app/views/**/*.jade',{
 			verbose: true
 		}))
 		.pipe(plugins.jade({

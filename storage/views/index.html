@@ -9,34 +9,75 @@
     <link rel="import" href="../../bower_components/paper-toggle-button/paper-toggle-button.html">
     <link rel="import" href="../../bower_components/iron-flex-layout/classes/iron-flex-layout.html">
     <link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="../../bower_components/neon-animation/neon-animated-pages.html">
+    <link rel="import" href="../../bower_components/neon-animation/neon-animations.html">
+    <link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="../../bower_components/paper-slider/paper-slider.html">
+    <link rel="import" href="../../bower_components/paper-button/paper-button.html">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   </head>
   <body unresolved class="fullbleed">
-    <paper-toolbar id="menu">
-      <div class="title">
-        <h1>Aquarium Automatica</h1>
-      </div>
-    </paper-toolbar>
+    <paper-tabs id="menu">
+      <paper-tab>Home</paper-tab>
+      <paper-tab>Admin</paper-tab>
+    </paper-tabs>
     <div id="content">
-      <div class="layout center-justified horizontal">
-        <paper-card heading="Bedieningspaneel Aquarium">
-          <div class="card-content">
-            <div class="layout horizontal center-justified">
-              <div class="layout vertical">
-                <div class="toggle zuurstof">
-                  <paper-toggle-button>Zuurstof</paper-toggle-button>
-                </div>
-                <div class="toggle licht">
-                  <paper-toggle-button>Licht</paper-toggle-button>
-                </div>
-                <div class="toggle filter">
-                  <paper-toggle-button>Filter</paper-toggle-button>
+      <neon-animated-pages selected="0" id="pages">
+        <neon-animatable>
+          <div class="container layout horizontal center-justified wrap">
+            <paper-card heading="Aquarium" class="flex-1 card">
+              <div class="card-content">
+                <div class="layout horizontal center-justified">
+                  <div class="layout vertical">
+                    <paper-toggle-button class="pad-bot-5">Licht</paper-toggle-button>
+                    <paper-toggle-button class="pad-bot-5">Zuurstof</paper-toggle-button>
+                    <paper-toggle-button class="pad-bot-5">Filter</paper-toggle-button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </paper-card>
+            <paper-card heading="Gordijnen" class="flex-1 card">
+              <div class="card-content">
+                <div class="layout horizontal center-justified">
+                  <div class="layout vertical">
+                    <div class="pad-bot-20 layout horizontal wrap">
+                      <paper-button raised>Open</paper-button>
+                      <paper-button raised>Dicht</paper-button>
+                      <paper-button raised>Stop</paper-button>
+                    </div>
+                    <paper-toggle-button class="pad-bot-5">Spots</paper-toggle-button>
+                    <paper-toggle-button class="pad-bot-5">Strips</paper-toggle-button>
+                  </div>
+                </div>
+              </div>
+            </paper-card>
+            <paper-card heading="Sfeer" class="flex-1 card">
+              <div class="card-content">
+                <div class="layout horizontal center-justified">
+                  <div class="layout vertical wrap">
+                    <div>Eet tafel</div>
+                    <paper-slider min="0" max="12" value="0" pin editable class="pad-bot-5"></paper-slider>
+                    <paper-toggle-button class="pad-bot-5">Hoofd licht</paper-toggle-button>
+                    <paper-toggle-button class="pad-bot-5">Tv wand</paper-toggle-button>
+                    <paper-toggle-button class="pad-bot-5">Achter wand</paper-toggle-button>
+                  </div>
+                </div>
+              </div>
+            </paper-card>
           </div>
-        </paper-card>
-      </div>
+        </neon-animatable>
+        <neon-animatable>
+          <div class="container layout horizontal center-justified">
+            <paper-card>
+              <div class="card-content">
+                <p>PAGE 2</p>
+              </div>
+            </paper-card>
+          </div>
+        </neon-animatable>
+      </neon-animated-pages>
     </div>
   </body>
+  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../scripts/pageSelector.js"></script>
 </html>
